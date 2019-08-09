@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <title>Youtube to mp3 converter</title>
+  <head>
+    <link href="{{ url_for('static',filename='prettify.css') }}" text="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+      <h1>YouTo3</h1>
+      <p>Convert a Youtube video to mp3 below.</p>
+      <div class = "message">
+        {{text | safe}}
+      </div>
+      <form class="input_field" action="{{url_for('download')}}" method="post">
+        <input type="url" name="url_name" placeholder="Please enter a valid url"><br>
+        <button type="submit" name="button">Convert and Download</button>
+      </form>
+    </div>
+  </body>
+</html>
